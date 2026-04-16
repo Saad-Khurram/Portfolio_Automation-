@@ -20,5 +20,12 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# Claude Code / BMAD planning files
+CLAUDE.md
+_bmad/
+_bmad-output/
+.claude/
+.cursor/
+
 # jetbrains setting folder
 .idea/
