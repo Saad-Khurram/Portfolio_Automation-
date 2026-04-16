@@ -1,0 +1,58 @@
+---
+---
+
+<section class="min-h-screen bg-gray-950 text-white flex flex-col justify-center px-6 py-24 sm:px-12 lg:px-24">
+  <div class="max-w-4xl mx-auto w-full">
+
+    <!-- Availability badge -->
+    <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium px-4 py-1.5 rounded-full mb-8">
+      <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+      Open to Werkstudent roles · Berlin / Remote
+    </div>
+
+    <!-- Headline -->
+    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight mb-6">
+      Still Learning.<br />
+      <span class="text-emerald-400">Already Automating.</span>
+    </h1>
+
+    <!-- Sub-headline -->
+    <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
+      Bachelor's student in Berlin — building real workflows with <strong class="text-white">n8n</strong> and <strong class="text-white">Python</strong>, looking for a team where we can both grow.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-wrap gap-4 mb-16">
+      <a
+        href="#projects"
+        class="bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-semibold px-6 py-3 rounded-lg transition-colors duration-150"
+      >
+        See my projects
+      </a>
+      <a
+        href="#contact"
+        class="border border-gray-700 hover:border-gray-500 text-gray-300 hover:text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-150"
+      >
+        Get in touch
+      </a>
+    </div>
+
+    <!-- Tech stack -->
+    <div class="flex flex-wrap items-center gap-3">
+      <span class="text-sm text-gray-600 mr-1">Stack:</span>
+      {[
+        'n8n',
+        'Python',
+        'LangChain',
+        'OpenAI API',
+        'FastAPI',
+        'PostgreSQL',
+      ].map((tech) => (
+        <span class="text-xs font-mono text-gray-400 bg-gray-800 border border-gray-700 px-3 py-1 rounded-md">
+          {tech}
+        </span>
+      ))}
+    </div>
+
+  </div>
+</section>

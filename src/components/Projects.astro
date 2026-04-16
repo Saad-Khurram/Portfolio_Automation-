@@ -1,0 +1,177 @@
+---
+const projects = [
+  {
+    title: 'Customer Support Automation',
+    tag: 'n8n · OpenAI API',
+    stat: '80%',
+    statLabel: 'less manual ticket handling',
+    story: 'A support team was drowning — the same questions, answered by hand, every single day. 3+ hours of copy-pasting tickets into spreadsheets before anyone even started replying. I built an n8n workflow that reads incoming emails, classifies intent with GPT-4o, auto-drafts replies for common cases, and escalates anything unusual to a human. The team went from 3 hours of daily grind to 20 minutes of review. Nobody answers the same question twice.',
+    links: {
+      github: '#',
+      demo: null,
+      workflow: '#',
+    },
+  },
+  {
+    title: 'RAG Knowledge Pipeline',
+    tag: 'Python · LangChain · PostgreSQL',
+    stat: '10 sec',
+    statLabel: 'vs. 20 min manual search',
+    story: 'Hundreds of documents scattered across Google Drive, Notion, and email threads — and finding a specific answer meant either asking a colleague or losing 20 minutes to a search that might turn up nothing. I built a RAG pipeline in Python that ingests, chunks, and embeds every document into a vector store. Ask it a natural-language question, get a precise answer in under 10 seconds, with source references. No manual indexing. No more "let me find that doc for you."',
+    links: {
+      github: '#',
+      demo: null,
+      workflow: null,
+    },
+  },
+  {
+    title: 'AI Customer Chatbot',
+    tag: 'n8n · Python · OpenAI API',
+    stat: '70%',
+    statLabel: 'of inbound questions handled automatically',
+    story: 'A service business was losing leads after hours — website visitors asking about pricing and availability with no one around to respond. By morning, they\'d moved on. I built a context-aware chatbot using n8n for orchestration and a tuned prompt layer that handles FAQs, qualifies leads, and books a callback when needed. It runs 24/7. Leads no longer fall through the cracks at 11pm.',
+    links: {
+      github: '#',
+      demo: '#',
+      workflow: '#',
+    },
+  },
+];
+---
+
+<section id="projects" class="bg-gray-950 text-white px-6 py-24 sm:px-12 lg:px-24">
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Section header -->
+    <div class="mb-16">
+      <span class="text-emerald-400 text-sm font-mono font-medium tracking-widest uppercase">Projects</span>
+      <h2 class="text-4xl sm:text-5xl font-bold mt-2">Workflows that ship.</h2>
+    </div>
+
+    <!-- Slider wrapper -->
+    <div class="relative">
+
+      <!-- Cards track -->
+      <div id="projects-track" class="overflow-hidden">
+        <div id="projects-slides" class="flex transition-transform duration-500 ease-in-out">
+          {projects.map((project, i) => (
+            <div class="w-full shrink-0">
+              <article class="border border-gray-800 rounded-xl p-8">
+
+                <!-- Header -->
+                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-6">
+                  <div>
+                    <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                      {project.tag}
+                    </span>
+                    <h3 class="text-2xl font-bold mt-3">{project.title}</h3>
+                  </div>
+                  <span class="text-gray-600 font-mono text-sm shrink-0">0{i + 1} / 0{projects.length}</span>
+                </div>
+
+                <!-- Impact stat -->
+                <div class="flex items-baseline gap-3 mb-6">
+                  <span class="text-4xl font-bold text-emerald-400">{project.stat}</span>
+                  <span class="text-gray-400 text-sm">{project.statLabel}</span>
+                </div>
+
+                <!-- Story -->
+                <p class="text-gray-300 text-sm leading-relaxed mb-8">{project.story}</p>
+
+                <!-- Links -->
+                <div class="flex flex-wrap gap-3">
+                  {project.links.github && (
+                    <a href={project.links.github} class="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 px-4 py-1.5 rounded-lg transition-colors duration-150">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                      GitHub
+                    </a>
+                  )}
+                  {project.links.workflow && (
+                    <a href={project.links.workflow} class="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 px-4 py-1.5 rounded-lg transition-colors duration-150">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+                      n8n Workflow
+                    </a>
+                  )}
+                  {project.links.demo && (
+                    <a href={project.links.demo} class="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 px-4 py-1.5 rounded-lg transition-colors duration-150">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+                      Live Demo
+                    </a>
+                  )}
+                </div>
+
+              </article>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex items-center justify-between mt-8">
+
+        <!-- Dots -->
+        <div id="projects-dots" class="flex gap-2">
+          {projects.map((_, i) => (
+            <button
+              class={`dot w-2 h-2 rounded-full transition-colors duration-200 ${i === 0 ? 'bg-emerald-400' : 'bg-gray-700'}`}
+              data-index={i}
+              aria-label={`Go to project ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        <!-- Arrows -->
+        <div class="flex gap-3">
+          <button
+            id="projects-prev"
+            class="w-10 h-10 flex items-center justify-center border border-gray-700 hover:border-gray-500 rounded-lg text-gray-400 hover:text-white transition-colors duration-150 disabled:opacity-30 disabled:cursor-not-allowed"
+            aria-label="Previous project"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+            </svg>
+          </button>
+          <button
+            id="projects-next"
+            class="w-10 h-10 flex items-center justify-center border border-gray-700 hover:border-gray-500 rounded-lg text-gray-400 hover:text-white transition-colors duration-150 disabled:opacity-30 disabled:cursor-not-allowed"
+            aria-label="Next project"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const slides = document.getElementById('projects-slides') as HTMLElement;
+  const dots = document.querySelectorAll('.dot') as NodeListOf<HTMLButtonElement>;
+  const prev = document.getElementById('projects-prev') as HTMLButtonElement;
+  const next = document.getElementById('projects-next') as HTMLButtonElement;
+  const total = dots.length;
+  let current = 0;
+
+  function goTo(index: number) {
+    current = index;
+    slides.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('bg-emerald-400', i === current);
+      dot.classList.toggle('bg-gray-700', i !== current);
+    });
+    prev.disabled = current === 0;
+    next.disabled = current === total - 1;
+  }
+
+  prev.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+  next.addEventListener('click', () => { if (current < total - 1) goTo(current + 1); });
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => goTo(Number(dot.dataset.index)));
+  });
+
+  goTo(0);
+</script>

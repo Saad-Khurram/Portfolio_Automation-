@@ -1,0 +1,68 @@
+---
+const skills = [
+  { label: 'Workflow Automation', value: 'n8n, Make, Zapier' },
+  { label: 'Programming', value: 'Python, FastAPI, SQL' },
+  { label: 'AI & LLMs', value: 'OpenAI API, LangChain, RAG, Prompt Engineering' },
+  { label: 'Databases', value: 'PostgreSQL, vector databases' },
+  { label: 'Tools & Infra', value: 'Git, Docker, Linux, REST APIs, Jira, Confluence' },
+  { label: 'Languages', value: 'English (fluent), German (B1)' },
+];
+---
+
+<section id="cv" class="bg-gray-950 text-white px-6 py-24 sm:px-12 lg:px-24">
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Section header -->
+    <div class="mb-16">
+      <span class="text-emerald-400 text-sm font-mono font-medium tracking-widest uppercase">CV</span>
+      <h2 class="text-4xl sm:text-5xl font-bold mt-2">Skills & background.</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+      <!-- Skills summary -->
+      <div>
+        <p class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-6">Skills summary</p>
+        <dl class="space-y-4">
+          {skills.map(({ label, value }) => (
+            <div class="grid grid-cols-[140px_1fr] gap-4 text-sm">
+              <dt class="text-gray-500">{label}</dt>
+              <dd class="text-gray-200">{value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <!-- Download + education -->
+      <div class="space-y-10">
+
+        <!-- Download card -->
+        <div class="border border-gray-800 rounded-xl p-8 flex flex-col items-start gap-4">
+          <div>
+            <p class="text-white font-semibold">Full CV</p>
+            <p class="text-sm text-gray-500 mt-1">Download the PDF for a complete overview of education, projects, and experience.</p>
+          </div>
+          <a
+            href="/cv.pdf"
+            class="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors duration-150"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+            </svg>
+            Download CV
+          </a>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <p class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">Education</p>
+          <div class="border-l-2 border-gray-800 pl-5">
+            <p class="text-white font-semibold">Bachelor's Degree</p>
+            <p class="text-sm text-gray-400 mt-0.5">Currently enrolled · Berlin</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+---
+const languages = [
+  { lang: 'English', level: 'Fluent', pct: 95, note: 'Primary working language' },
+  { lang: 'German', level: 'Learning', pct: 35, note: 'Actively improving — happy to work in a German-speaking team' },
+];
+---
+
+<section id="about" class="bg-gray-900 text-white px-6 py-24 sm:px-12 lg:px-24">
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Section header -->
+    <div class="mb-16">
+      <span class="text-emerald-400 text-sm font-mono font-medium tracking-widest uppercase">About</span>
+      <h2 class="text-4xl sm:text-5xl font-bold mt-2">The person behind the workflows.</h2>
+    </div>
+
+    <div class="max-w-2xl space-y-5 text-gray-300 leading-relaxed">
+      <p>
+        I'm Saad — a bachelor's student based in Berlin, currently exploring one of the more satisfying ideas in tech: if a human is doing the same thing more than twice, a workflow should probably handle it instead.
+      </p>
+      <p>
+        I started with Python and discovered n8n not long ago, and I've been genuinely hooked ever since. I've built working automations — a support pipeline, a RAG-based knowledge system, an AI chatbot — not just tutorials, but things I actually got running for real use cases. I'm still learning, and that's exactly how I like it. Every new workflow teaches me something the last one didn't.
+      </p>
+      <p>
+        I'm looking for a Werkstudent role where I can contribute hands-on while continuing to grow. I work best in environments where the problems are real and the feedback is direct — that's where I learn fastest.
+      </p>
+      <p>
+        My working language is English, and I'm actively working on my German. A team where I can use it daily would genuinely help.
+      </p>
+      <p class="text-gray-500 text-sm">
+        Available 20 hrs/week alongside my studies.
+      </p>
+
+      <!-- Languages -->
+      <div class="pt-4 max-w-sm">
+        <p class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">Languages</p>
+        <div class="space-y-3">
+          {languages.map(({ lang, level, pct, note }) => (
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-white font-medium">{lang}</span>
+                <span class="text-gray-500">{level}</span>
+              </div>
+              <div class="h-1.5 bg-gray-800 rounded-full overflow-hidden mb-1">
+                <div
+                  class="h-full bg-emerald-500 rounded-full"
+                  style={`width: ${pct}%`}
+                />
+              </div>
+              <p class="text-xs text-gray-600">{note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
