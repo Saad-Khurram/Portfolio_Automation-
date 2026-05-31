@@ -13,27 +13,27 @@ const projects = [
     },
   },
   {
-    title: 'RAG Knowledge Pipeline',
-    tag: 'Python · LangChain · PostgreSQL',
-    stat: '10 sec',
-    statLabel: 'vs. 20 min manual search',
-    story: 'Hundreds of documents scattered across Google Drive, Notion, and email threads — and finding a specific answer meant either asking a colleague or losing 20 minutes to a search that might turn up nothing. I built a RAG pipeline in Python that ingests, chunks, and embeds every document into a vector store. Ask it a natural-language question, get a precise answer in under 10 seconds, with source references. No manual indexing. No more "let me find that doc for you."',
+    title: 'DecipherDE — German Document Translator',
+    tag: 'Python · Claude API · Streamlit',
+    stat: '< 10s',
+    statLabel: 'from upload to plain-English explanation + action items',
+    story: 'You get a letter from the Ausländerbehörde. It\'s dense, official German — and buried somewhere in it is a deadline you can\'t miss, or a document you forgot to bring. Most people either panic-translate it word by word or just ignore it and hope for the best. I built DecipherDE: upload any German official document (PDF or photo) and get an instant plain-English breakdown — what it says, what you need to do, what the deadlines are, and what to watch out for. Powered by Claude\'s vision capabilities. Part of the GermGuide AI suite.',
     links: {
-      github: '#',
-      demo: null,
+      github: 'https://github.com/Saad-Khurram/DecipherDE',
+      demo: 'https://decipherde-bfwzinxbydotcqnsyuwjxd.streamlit.app/',
       workflow: null,
     },
   },
   {
-    title: 'AI Customer Chatbot',
-    tag: 'n8n · Python · OpenAI API',
-    stat: '70%',
-    statLabel: 'of inbound questions handled automatically',
-    story: 'A service business was losing leads after hours — website visitors asking about pricing and availability with no one around to respond. By morning, they\'d moved on. I built a context-aware chatbot using n8n for orchestration and a tuned prompt layer that handles FAQs, qualifies leads, and books a callback when needed. It runs 24/7. Leads no longer fall through the cracks at 11pm.',
+    title: 'AskVisa — German Visa Chatbot',
+    tag: 'Python · Streamlit · Claude API',
+    stat: 'Live',
+    statLabel: 'deployed on Streamlit Community Cloud',
+    story: 'International students in Germany drown in bureaucracy — visa types, work hour limits, residence permit extensions, Anmeldung deadlines. The official sources are dense, the forums are wrong half the time, and mistakes cost months. I built AskVisa: a plain-English chatbot powered by the Claude API that answers student visa questions instantly and accurately. Ask it anything from "how many hours can I work?" to "what happens if I miss my permit renewal?" — it knows. Part of a broader GermGuide AI initiative to make German bureaucracy less terrifying.',
     links: {
-      github: '#',
-      demo: '#',
-      workflow: '#',
+      github: 'https://github.com/Saad-Khurram/askvisa',
+      demo: 'https://askvisa-db5g7tqeqbvb2zxlxfbsce.streamlit.app/',
+      workflow: null,
     },
   },
 ];
@@ -81,7 +81,7 @@ const projects = [
                 <!-- Links -->
                 <div class="flex flex-wrap gap-3">
                   {project.links.github && (
-                    <a href={project.links.github} class="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 px-4 py-1.5 rounded-lg transition-colors duration-150">
+                    <a href={project.links.github} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 px-4 py-1.5 rounded-lg transition-colors duration-150">
                       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                       GitHub
                     </a>
@@ -93,7 +93,7 @@ const projects = [
                     </a>
                   )}
                   {project.links.demo && (
-                    <a href={project.links.demo} class="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 px-4 py-1.5 rounded-lg transition-colors duration-150">
+                    <a href={project.links.demo} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 px-4 py-1.5 rounded-lg transition-colors duration-150">
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
                       Live Demo
                     </a>
@@ -124,19 +124,19 @@ const projects = [
         <div class="flex gap-3">
           <button
             id="projects-prev"
-            class="w-10 h-10 flex items-center justify-center border border-gray-700 hover:border-gray-500 rounded-lg text-gray-400 hover:text-white transition-colors duration-150 disabled:opacity-30 disabled:cursor-not-allowed"
+            class="w-12 h-12 flex items-center justify-center bg-gray-800 border border-emerald-500/40 hover:border-emerald-400 hover:bg-emerald-500/10 rounded-xl text-emerald-400 hover:text-emerald-300 transition-all duration-200 disabled:opacity-25 disabled:cursor-not-allowed"
             aria-label="Previous project"
           >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
             </svg>
           </button>
           <button
             id="projects-next"
-            class="w-10 h-10 flex items-center justify-center border border-gray-700 hover:border-gray-500 rounded-lg text-gray-400 hover:text-white transition-colors duration-150 disabled:opacity-30 disabled:cursor-not-allowed"
+            class="w-12 h-12 flex items-center justify-center bg-gray-800 border border-emerald-500/40 hover:border-emerald-400 hover:bg-emerald-500/10 rounded-xl text-emerald-400 hover:text-emerald-300 transition-all duration-200 disabled:opacity-25 disabled:cursor-not-allowed"
             aria-label="Next project"
           >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
             </svg>
           </button>

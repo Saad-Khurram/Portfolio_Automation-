@@ -1,17 +1,21 @@
 ---
 ---
 
-<section class="min-h-screen bg-gray-950 text-white flex flex-col justify-center px-6 py-24 sm:px-12 lg:px-24">
-  <div class="max-w-4xl mx-auto w-full">
+<section class="min-h-screen text-white flex flex-col justify-center px-6 py-24 sm:px-12 lg:px-24 relative bg-gray-950">
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+    <source src="/hero-bg.mp4" type="video/mp4" />
+  </video>
+  <div class="absolute inset-0 bg-gray-950/70"></div>
+  <div class="relative max-w-4xl mx-auto w-full">
 
     <!-- Availability badge -->
-    <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium px-4 py-1.5 rounded-full mb-8">
-      <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-      Open to Werkstudent roles · Berlin / Remote
+    <div class="flex w-fit items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-medium px-4 py-1.5 rounded-full mb-8 max-w-full">
+      <span class="w-2 h-2 shrink-0 bg-emerald-400 rounded-full animate-pulse"></span>
+      <span>Open to Werkstudent roles · Berlin / Remote</span>
     </div>
 
     <!-- Headline -->
-    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight mb-6">
+    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-tight mb-6">
       Still Learning.<br />
       <span class="text-emerald-400">Already Automating.</span>
     </h1>
@@ -31,15 +35,24 @@
       </a>
       <a
         href="#contact"
-        class="border border-gray-700 hover:border-gray-500 text-gray-300 hover:text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-150"
+        class="border-2 border-white hover:bg-white text-white hover:text-gray-950 font-semibold px-6 py-3 rounded-lg transition-colors duration-150"
       >
         Get in touch
+      </a>
+      <a
+        href="/cv.pdf"
+        class="flex items-center gap-2 border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 font-semibold px-6 py-3 rounded-lg transition-colors duration-150"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+        </svg>
+        Download CV
       </a>
     </div>
 
     <!-- Tech stack -->
     <div class="flex flex-wrap items-center gap-3">
-      <span class="text-sm text-gray-600 mr-1">Stack:</span>
+      <span class="text-sm text-gray-300 mr-1">Stack:</span>
       {[
         'n8n',
         'Python',
@@ -48,7 +61,7 @@
         'FastAPI',
         'PostgreSQL',
       ].map((tech) => (
-        <span class="text-xs font-mono text-gray-400 bg-gray-800 border border-gray-700 px-3 py-1 rounded-md">
+        <span class="text-xs font-mono text-white bg-white/10 border border-white/30 px-3 py-1 rounded-md backdrop-blur-sm">
           {tech}
         </span>
       ))}

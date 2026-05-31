@@ -4,7 +4,7 @@ const skills = [
   { label: 'Programming', value: 'Python, FastAPI, SQL' },
   { label: 'AI & LLMs', value: 'OpenAI API, LangChain, RAG, Prompt Engineering' },
   { label: 'Databases', value: 'PostgreSQL, vector databases' },
-  { label: 'Tools & Infra', value: 'Git, Docker, Linux, REST APIs, Jira, Confluence' },
+  { label: 'Tools & Infra', value: 'Git, Docker, Jira, Confluence, MS Office' },
   { label: 'Languages', value: 'English (fluent), German (B1)' },
 ];
 ---
@@ -25,7 +25,7 @@ const skills = [
         <p class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-6">Skills summary</p>
         <dl class="space-y-4">
           {skills.map(({ label, value }) => (
-            <div class="grid grid-cols-[140px_1fr] gap-4 text-sm">
+            <div class="grid grid-cols-[120px_1fr] sm:grid-cols-[140px_1fr] gap-3 sm:gap-4 text-sm">
               <dt class="text-gray-500">{label}</dt>
               <dd class="text-gray-200">{value}</dd>
             </div>
@@ -57,7 +57,7 @@ const skills = [
         <div>
           <p class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">Education</p>
           <div class="border-l-2 border-gray-800 pl-5">
-            <p class="text-white font-semibold">Bachelor's Degree</p>
+            <p class="text-white font-semibold">Bachelor of Science in Computer Science</p>
             <p class="text-sm text-gray-400 mt-0.5">Currently enrolled · Berlin</p>
           </div>
         </div>

@@ -18,16 +18,22 @@ const { title, description = 'Saad — n8n Workflow Automation & Python' } = Ast
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-sm border-b border-gray-800">
       <div class="max-w-4xl mx-auto px-6 sm:px-12 lg:px-24 h-14 flex items-center justify-between">
-        <a href="#" class="font-mono text-sm font-bold tracking-tight">
-          <span class="text-gray-500">&lt;</span><span class="text-emerald-400">SK</span><span class="text-gray-500"> /&gt;</span>
+        <a href="#" class="font-mono text-sm font-bold tracking-tight flex items-center gap-0 border border-emerald-500/50 bg-emerald-500/8 hover:bg-emerald-500/15 hover:border-emerald-400 transition-all duration-200 px-3 py-1.5 rounded-lg">
+          <span class="text-white">saad</span><span class="text-emerald-400">.run</span>
         </a>
         <div class="flex items-center gap-3">
-          <a href="#about" class="text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 px-4 py-1.5 rounded-lg transition-colors">About me</a>
-          <a href="#cv" class="text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 px-4 py-1.5 rounded-lg transition-colors">Skills & Background</a>
-          <a href="#contact" class="text-sm bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-semibold px-4 py-1.5 rounded-lg transition-colors">Contact</a>
+          <a href="#about" class="text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 px-3 py-1.5 rounded-lg transition-colors">
+            <span class="sm:hidden">About</span>
+            <span class="hidden sm:inline">About me</span>
+          </a>
+          <a href="#cv" class="text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 px-4 py-1.5 rounded-lg transition-colors">
+            <span class="sm:hidden">Skills</span>
+            <span class="hidden sm:inline">Skills & Background</span>
+          </a>
+          <a href="#contact" class="hidden sm:inline-flex text-sm bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-semibold px-4 py-1.5 rounded-lg transition-colors">Contact</a>
         </div>
       </div>
     </nav>
