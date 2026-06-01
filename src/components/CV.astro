@@ -42,15 +42,28 @@ const skills = [
             <p class="text-white font-semibold">Full CV</p>
             <p class="text-sm text-gray-500 mt-1">Download the PDF for a complete overview of education, projects, and experience.</p>
           </div>
-          <a
-            href="/cv.pdf"
-            class="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors duration-150"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
-            </svg>
-            Download CV
-          </a>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="/cv-en.pdf"
+              download
+              class="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors duration-150"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+              </svg>
+              CV (English)
+            </a>
+            <a
+              href="/cv-de.pdf"
+              download
+              class="flex items-center gap-2 border border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-gray-950 font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors duration-150"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+              </svg>
+              Lebenslauf (Deutsch)
+            </a>
+          </div>
         </div>
 
         <!-- Education -->

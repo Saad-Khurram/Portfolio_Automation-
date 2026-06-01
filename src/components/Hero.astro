@@ -30,21 +30,6 @@
         See my projects
       </a>
       <a
-        href="#contact"
-        class="border-2 border-white hover:bg-white text-white hover:text-gray-950 font-semibold px-6 py-3 rounded-lg transition-colors duration-150"
-      >
-        Get in touch
-      </a>
-      <a
-        href="/cv.pdf"
-        class="flex items-center gap-2 border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 font-semibold px-6 py-3 rounded-lg transition-colors duration-150"
-      >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
-        </svg>
-        Download CV
-      </a>
-      <a
         href="https://github.com/Saad-Khurram"
         target="_blank"
         rel="noopener noreferrer"
@@ -55,6 +40,34 @@
         </svg>
         GitHub
       </a>
+      <div class="relative" id="cv-dropdown">
+        <button
+          id="cv-btn"
+          class="flex items-center gap-2 border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 font-semibold px-6 py-3 rounded-lg transition-colors duration-150"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+          </svg>
+          Download CV
+          <svg class="w-3.5 h-3.5 ml-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="cv-menu" class="hidden absolute top-full left-0 mt-2 bg-gray-900 border border-gray-800 rounded-lg overflow-hidden z-20 shadow-xl min-w-full">
+          <a href="/cv-en.pdf" download class="flex items-center gap-3 px-5 py-3 text-sm text-gray-200 hover:bg-gray-800 hover:text-white transition-colors duration-100">
+            English
+          </a>
+          <a href="/cv-de.pdf" download class="flex items-center gap-3 px-5 py-3 text-sm text-gray-200 hover:bg-gray-800 hover:text-white transition-colors duration-100 border-t border-gray-800">
+            Deutsch
+          </a>
+        </div>
+      </div>
+      <a
+        href="#contact"
+        class="border-2 border-white hover:bg-white text-white hover:text-gray-950 font-semibold px-6 py-3 rounded-lg transition-colors duration-150"
+      >
+        Get in touch
+      </a>
     </div>
 
     <!-- Tech stack -->
@@ -62,11 +75,13 @@
       <span class="text-sm text-gray-300 mr-1">Stack:</span>
       {[
         'n8n',
-        'Python',
-        'LangChain',
         'OpenAI API',
-        'FastAPI',
-        'PostgreSQL',
+        'Anthropic API',
+        'SQL',
+        'Python',
+        'RAG',
+        'REST APIs / Webhooks',
+        'Make',
       ].map((tech) => (
         <span class="text-xs font-mono text-white bg-white/10 border border-white/30 px-3 py-1 rounded-md backdrop-blur-sm">
           {tech}
@@ -76,3 +91,14 @@
 
   </div>
 </section>
+
+<script>
+  const btn = document.getElementById('cv-btn');
+  const menu = document.getElementById('cv-menu');
+  const wrapper = document.getElementById('cv-dropdown');
+
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  document.addEventListener('click', (e) => {
+    if (!wrapper.contains(e.target as Node)) menu.classList.add('hidden');
+  });
+</script>
